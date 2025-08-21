@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap"
+         rel="stylesheet"
+      />
+      <title>Birthday Gift Site</title>
+   </head>
+   <body>
+      <div class="form-container">
+         <h1>Happy Birthday This Gift Is For You 🤭😚<br</h1>
+         <!-- Pre-added input values -->
+          
+         <ul style="list-style:none ;padding:2;">
+            
+            <li><strong>Name:</strong> <span id="preName">Riya</span></li>
+            <li><strong>Age:</strong> <span id="preAge">21</span></li>
+            <li><strong>Date of Birth:</strong> <span id="preDob">2004-08-21</span></li>
+            <li><strong>Picture:</strong> <img id="prePicture" src="images/Riya.webp" alt="Pre-added Picture" style="width:100px;border-radius:50%;vertical-align:middle;" /></li>
+         </ul>
+         <button class="buttonSubmit" type="button" onclick="displayBirthday()">Show Birthday</button>
+      </div>
+
+      <div class="header" id="birthdayHeader" style="display: none">
+         <h1 id="birthdayName"></h1>
+         <img id="birthdayImage" src="" alt="Birthday Image" class="avatar" />
+         <h2 class="age" id="birthdayAge">21</h2>
+         <h4 class="date" id="birthdayDate"></h4>
+      </div>
+
+      <!-- gift sections -->
+      <div class="gift-section" style="display: none">
+         <h2 class="gift-title">Here's how happy I am for you today 🥳</h2>
+         <h3 class="gift-hint">(Hover over the gift)</h3>
+         <div class="happy-gif gift-cover"></div>
+      </div>
+
+      <div class="gift-section" style="display: none">
+         <h2 class="gift-title">How people react when you enter the room 😍</h2>
+         <div class="respect-gif gift-cover"></div>
+      </div>
+
+      <div class="gift-section" style="display: none">
+         <h2 class="gift-title">If I had to describe you with ONE word 👇</h2>
+         <div class="genius-gif gift-cover"></div>
+      </div>
+
+      <div class="gift-section" style="display: none">
+         <h2 class="gift-title">The only person as badass as you 💪</h2>
+         <div class="goat-gif gift-cover"></div>
+      </div>
+
+      <div class="gift-section" style="display: none">
+         <h2 class="gift-title">This one's for you, my friend 👊</h2>
+         <div class="cheers-gif gift-cover"></div>
+      </div>
+
+      <!-- footer -->
+      <div class="footer" style="display: none">
+         <p>
+            created by
+            <a href="https://github.com/BanSimplified567/Birthday-Gift" target="_blank">BanBan</a>
+         </p>
+      </div>
+
+      <audio id="birthdayAudio" src="./happybirthday.mp3" preload="auto" loop></audio>
+      <div id="audioControls" style="display:none; margin: 20px auto; max-width: 400px; align-items:center; justify-content:center; gap:10px;">
+         <button id="playPauseBtn">Play</button>
+         <button id="muteBtn">Mute</button>
+         <input id="audioProgress" type="range" min="0" max="100" value="0" step="1" style="width:150px;vertical-align:middle;" />
+         <span id="audioTime" style="font-size:0.9em;">0:00 / 0:00</span>
+      </div>
+      <script src="./script.js"></script>
+   </body>
+</html>
